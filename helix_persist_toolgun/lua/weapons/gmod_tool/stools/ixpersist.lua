@@ -26,12 +26,20 @@ TOOL.Category = "Helix"
 TOOL.Name = "#tool.ixpersist.name"
 TOOL.Description = "#tool.ixpersist.desc"
 if SERVER then
+    local function CanUsePersistence(ply, entity, isPersisting)
+        local AdminPersistable = {"prop_physics",}
+        if ply:IsSuperAdmin() then return true end
+        if ply:IsAdmin() and table.HasValue(AdminPersistable, entity:GetClass()) then return true end
+        return false
+    end
+
     util.AddNetworkString("PersistenceTool_Persist")
     util.AddNetworkString("PersistenceTool_Unpersist")
     net.Receive("PersistenceTool_Persist", function(len, ply)
         local entity = net.ReadEntity()
         if not IsValid(entity) then return end
-        entity:SetPersistent(true) -- Custom function to make entity persistent
+        if not CanUsePersistence(ply, entity, true) then return end
+        entity:SetPersistent(true)
         print(ply:Nick() .. " has made " .. entity:GetClass() .. " persistent.")
         ply:Notify("Enabled persist for " .. entity:GetClass())
     end)
@@ -39,7 +47,8 @@ if SERVER then
     net.Receive("PersistenceTool_Unpersist", function(len, ply)
         local entity = net.ReadEntity()
         if not IsValid(entity) then return end
-        entity:SetPersistent(false) -- Custom function to remove persistence
+        if not CanUsePersistence(ply, entity, false) then return end
+        entity:SetPersistent(false)
         print(ply:Nick() .. " has removed persistence from " .. entity:GetClass() .. ".")
         ply:Notify("Removed persist for " .. entity:GetClass())
     end)
