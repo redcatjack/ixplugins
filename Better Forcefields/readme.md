@@ -7,6 +7,6 @@ Place the "betterforcefield" folder into server's `\garrysmod\gamemodes\ixhl2rp\
 Forcefield can be found under:
 **Q > Entities > Forcefields**
 
-Press ALT+E on the forcefield to configure it.
+Press `ALT+E` on the forcefield to configure it.
 
-Special thanks to zamboni (Creator Forcefields V2) and Mucker (Creator of the Clockwork Plugin).
+*Special thanks to zamboni (Creator Forcefields V2) and Mucker (Creator of the Clockwork Plugin).*
