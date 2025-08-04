@@ -1,3 +1,5 @@
+-- Created by redcatjack https://steamcommunity.com/id/redcatjack/
+
 -- --------------------------------------------------------------------------------------------------
 -- SERVERSIDE CODE - I don't recommend editing in here unless you know what you are doing.
 -- --------------------------------------------------------------------------------------------------

@@ -1,3 +1,5 @@
+-- Created by redcatjack https://steamcommunity.com/id/redcatjack/
+
 local PLUGIN = PLUGIN
 
 -- --------------------------------------------------------------------------------------------------
