@@ -13,7 +13,7 @@ A comprehensive clearance and access control system for [Helix](https://github.c
 
 ## Installation
 
-1.  Place all the plugin folder; (`clearancesystem`) into the plugins folder within your Helix schema.
+1.  Place the plugin folder; (`clearancesystem`) into the plugins folder within your Helix schema.
 2.  Modify the `sh_config.lua` file to configure button access and review the faction setup instructions.
 3.  Restart the server after installation.
 
@@ -74,3 +74,4 @@ Commands are prefixed with `/` in the chat (e.g., `/ShowID`).
 | `/DoorClearanceList`     | List all clearance levels on the door you are looking at.                | -                               |
 | `/DoorClearanceClear`    | Remove all clearance levels from the door you are looking at.            | -                               |
 | `/ShowEntityName`        | Displays the name of the entity you are looking at.                      | -                               |
+
